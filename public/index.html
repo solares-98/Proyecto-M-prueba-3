@@ -1813,10 +1813,14 @@ function loadSong(song){
 loadSong(songs[songIndex]);
 
 /* PLAY */
-function playSong(){
-    audio.play();
-    isPlaying = true;
-    playBtn.innerHTML = "❚❚";
+async function playSong(){
+    try{
+        await audio.play();
+        isPlaying = true;
+        playBtn.innerHTML = "❚❚";
+    }catch(error){
+        console.log("Error audio:", error);
+    }
 }
 
 /* PAUSE */
