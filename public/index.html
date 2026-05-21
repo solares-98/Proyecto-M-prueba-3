@@ -729,6 +729,95 @@
             border-radius: 10px;
         }
 
+        /* PADRINOS */
+
+        .godparents-section{
+            position:relative;
+            padding:
+            clamp(60px, 8vw, 100px)
+            20px;
+            overflow:hidden;
+        }
+
+        /* GRID */
+        .godparents-grid{
+            margin-top:50px;
+            display:grid;
+            grid-template-columns:
+            repeat(2, 1fr);
+            gap:30px;
+            max-width:900px;
+            margin-inline:auto;
+        }
+
+        /* CARD */
+        .godparent-card{
+            position:relative;
+            padding:35px 25px;
+            border-radius:28px;
+            background:
+            linear-gradient(
+                145deg,
+                rgba(255,255,255,.92),
+                rgba(245,240,233,.88)
+            );
+            backdrop-filter: blur(12px);
+            border:
+            1px solid rgba(122,47,0,.08);
+            box-shadow:
+                0 15px 35px rgba(0,0,0,.08);
+            transition:.4s ease;
+            overflow:hidden;
+            position:relative;
+            z-index:1;
+        }
+
+        /* DECORACIÓN */
+        .godparent-card::before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:50%;
+            width:70px;
+            height:2px;
+            background:#c7a17a;
+            transform:translateX(-50%);
+        }
+
+        /* ROL */
+        .godparent-role{
+            display:block;
+            font-size:.8rem;
+            letter-spacing:3px;
+            text-transform:uppercase;
+            color:#b08968;
+            margin-bottom:14px;
+        }
+
+        /* NOMBRE */
+        .godparent-card h3{
+            margin:0;
+            font-family:"Cormorant", serif;
+            font-size:2.2rem;
+            font-weight:500;
+            line-height:1.2;
+            color:#7a2f00;
+        }
+
+        /* MOBILE */
+        @media(max-width:768px){
+            .godparents-grid{
+                grid-template-columns:1fr;
+                gap:22px;
+            }
+            .godparent-card{
+                padding:28px 20px;
+            }
+            .godparent-card h3{
+                font-size:1.9rem;
+            }
+        }
+
         /* CONTENEDOR */
         .timeline-section {
             padding: clamp(56px, 7vw, 88px) 20px;
@@ -1338,7 +1427,7 @@
             width:220px;
 
             pointer-events:none;
-            z-index:0;
+            z-index:3;
             animation:
                 flowerFloat 7s ease-in-out infinite;
         }
@@ -1465,6 +1554,55 @@
     </section>
 
     <!-- Padres y padrinos de velacion -->
+    <section class="godparents-section floral-section">
+        <img src="images/Flores lateral.png" class="section-flower flower-left">
+        <h2 data-aos="fade-up">
+            Nuestros padrinos
+        </h2>
+        <img src="images/Flores lateral.png" class="section-flower flower-right">
+        <div class="godparents-grid">
+
+            <!-- PADRINOS 1 -->
+            <div class="godparent-card" data-aos="fade-up" data-aos-duration="1500">
+                <span class="godparent-role">
+                    Padrinos de velación
+                </span>
+                <h3>
+                    María & José
+                </h3>
+            </div>
+
+            <!-- PADRINOS 2 -->
+            <div class="godparent-card" data-aos="fade-up" data-aos-duration="1700">
+                <span class="godparent-role">
+                    Padrinos de anillos
+                </span>
+                <h3>
+                    Fernanda & Luis
+                </h3>
+            </div>
+
+            <!-- PADRINOS 3 -->
+            <div class="godparent-card" data-aos="fade-up" data-aos-duration="1900">
+                <span class="godparent-role">
+                    Padrinos de arras
+                </span>
+                <h3>
+                    Andrea & Miguel
+                </h3>
+            </div>
+
+            <!-- PADRINOS 4 -->
+            <div class="godparent-card" data-aos="fade-up" data-aos-duration="2100">
+                <span class="godparent-role">
+                    Padrinos de lazo
+                </span>
+                <h3>
+                    Karla & David
+                </h3>
+            </div>
+        </div>
+    </section>
 
     <!-- Imagen de Collage -->
     <section class="hero hero-divider">
